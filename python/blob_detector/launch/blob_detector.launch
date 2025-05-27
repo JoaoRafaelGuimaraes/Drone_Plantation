@@ -10,8 +10,8 @@
 
       <rosparam file="$(find example_blob_detector)/config/blob_detector.yaml" />
 
-      <remap from="~image_raw_in" to="mobius_front/image_raw" />
-      <remap from="~camera_info_in" to="mobius_front/camera_info" />
+      <remap from="~image_raw_in" to="mobius_down/image_raw" />
+      <remap from="~camera_info_in" to="mobius_down/camera_info" />
 
       <remap from="~image_raw_out" to="~processed_image/image_raw" />
       <remap from="~camera_info_out" to="~processed_image/image_raw/camera_info" />

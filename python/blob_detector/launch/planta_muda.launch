@@ -1,0 +1,7 @@
+<launch>
+  <!-- Ativa o script de plantio -->
+  <node name="drone_planter" pkg="example_blob_detector" type="plant_seed.py" output="screen" />
+
+  <!-- Ativa o script de geração de KML -->
+  <node name="kml_generator" pkg="example_blob_detector" type="kml_gen.py" output="screen" />
+</launch>
