@@ -140,7 +140,7 @@ class PlanterNode:
 
     def spawn_plant(self, name, x, y):
         if not hasattr(self, "model_xml"):
-            with open('/usr/share/gazebo-11/models/big_plant/model.sdf','r') as f:
+            with open('../models/big_plant/model.sdf','r') as f:
                 self.model_xml = f.read()
 
         pose = Pose()
