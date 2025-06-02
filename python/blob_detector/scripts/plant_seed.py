@@ -3,7 +3,7 @@
 import rospy
 import math
 from threading import Lock
-
+import os
 from gazebo_msgs.srv import SpawnModel
 from mrs_msgs.srv import Vec4, PathSrv, PathSrvRequest
 from mrs_msgs.msg import Reference
@@ -140,7 +140,7 @@ class PlanterNode:
 
     def spawn_plant(self, name, x, y):
         if not hasattr(self, "model_xml"):
-            with open('../models/big_plant/model.sdf','r') as f:
+            with open('/usr/share/gazebo-11/models/big_plant/model.sdf','r') as f:
                 self.model_xml = f.read()
 
         pose = Pose()
